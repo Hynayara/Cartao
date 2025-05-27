@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Parabéns ao Casal!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      background-color: #0e0e0e;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #00ff99;
+      text-shadow: 0 0 10px #00ff99;
+      animation: blink 1s infinite alternate;
+    }
+
+    .heart {
+      width: 32px;
+      height: 32px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: cover;
+      animation: beat 0.6s infinite alternate;
+      margin: 10px;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+
+    @keyframes blink {
+      from { opacity: 1; }
+      to { opacity: 0.5; }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .button {
+      margin-top: 30px;
+      padding: 5px 20px;
+      background: #ff00cc;
+      border: none;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      animation: blink 1.5s infinite;
+    }
+
+    .button img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* POP-UP personalizado */
+    #customAlert {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #222;
+      color: white;
+      padding: 20px;
+      border: 3px solid #00ff99;
+      text-align: center;
+      z-index: 9999;
+      font-size: 12px;
+    }
+
+    #customAlert img {
+      width: 100px;
+      margin-top: 0px;
+    }
+
+    #customAlert button {
+      margin-top: 25px;
+      padding: 5px 10px;
+      background: #00ff99;
+      border: none;
+      color: #000;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+    }
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 10px #ff69b4); }
+  to   { filter: drop-shadow(0 0 10px #ff1493); }
+}
+.brilhante {
+  width: 80px;
+  filter: drop-shadow(0 0 10px #00ff99);
+  animation: brilhoNeon 1s infinite alternate;
+}
+  </style>
+</head>
+<body>
+  <h1>💍 LEVEL UP: CASAMENTO +2</h1>
+  <div class="heart"></div>
+  <div class="message">
+    <p>Parabéns, casal campeão!</p>
+    <p>Mais uma fase vencida com amor, respeito e parceria!</p>
+    <p>Com carinho de quem ama vcs!!! 💖</p>
+  </div>
+
+  <!-- BOTÃO COM ÍCONE -->
+  <button class="button" onclick="document.getElementById('customAlert').style.display='block'">
+    <img src="Vector-Gamepad-PNG-Photos.png" alt="joystick">
+    PLAY AGAIN
+  </button>
+
+  <!-- POP-UP COM IMAGEM -->
+  <div id="customAlert">
+    <p>🎉 GG! Casamento épico desbloqueado! 🎉</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/3771/3771478.png" 
+    alt="Epic Heart"
+    class="brilante"
+    style="width: 80px; filter: drop-shadow(0 0 10px #ff1493); transition: transform 0.3s ease-in-out;">
+    <p><img src="Gurias.jpg" alt="Gurias" style="width: 300px; margin-top: 5px;"></p>
+    <br>
+    <button onclick="document.getElementById('customAlert').style.display='none'">OK</button>
+  </div>
+</body>
+</html>
